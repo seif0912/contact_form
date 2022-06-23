@@ -12,7 +12,7 @@ body{
 
 .contact-container{
     display: flex;
-    max-width: 1000px;
+    width: 1000px;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -21,14 +21,21 @@ body{
 }
 
 @media (max-width: 1000px){
+    body{
+        height: 1100px;
+    }
     .contact-container{
         flex-direction: column;
+        width: 570px;
     }
 }
 
-@media (max-width: 645px){
+@media (max-width: 570px){
+    body{
+        padding-top: 70px;
+    }
     .contact-container{
-        margin-top: 120px;
+        width: 100%;
         position: unset;
         transform: unset;
         top: unset;
@@ -36,10 +43,10 @@ body{
     }
 }
 
-.contact-container .home-btn{
+.home-btn{
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: -60px;
+    transform: translateX(-50%);
+    top: 15px;
     left: 50%;
     padding: 13px 25px;
     text-transform: capitalize;
@@ -53,7 +60,7 @@ body{
     text-decoration: none;
 }
 
-.contact-container .home-btn:hover{
+.home-btn:hover{
     opacity: .85;
     border-radius: 10px;
 }
@@ -174,4 +181,3 @@ body{
 .contact-container .form button:hover{
     opacity: .85;
 }
-
