@@ -20,6 +20,7 @@ app.set('view engine', 'ejs')
 
 app.use(cors())
 app.use(express.json())
+// app.use(express.status(__dirname + "index.ejs"))
 
 
 app.get('/', (req, res) => {
@@ -32,6 +33,17 @@ app.get('/contact', (req, res) => {
 
 app.post('/message', (req, res) => {
     console.log(req.body)
+    let query = `
+        INSERT INTO messages(name, email, subject, message)
+        VALUES ('${req.body.name}', '${req.body.email}', '${req.body.subject}', '${req.body.message}')
+    `
+    db.query(query, (err, result) => {
+        if (err) {
+            throw err
+        }
+        console.log(result)
+        res.status(201).redirect('/')
+    })
 })
 
 app.listen(port, () => {
