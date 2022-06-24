@@ -27,8 +27,18 @@ app.get('/', (req, res) => {
     db.query(query, (err, result) => {
         if (err) throw err
         res.status(201)
-        console.log(result)
+        // console.log(result)
         res.render('index', {data: result})
+    })
+})
+
+app.get('/view-message/:id', (req, res) => {
+    let query = `SELECT * FROM messages WHERE id='${req.params.id}'`
+    db.query(query, (err, result) => {
+        if (err) throw err
+        res.status(201)
+        console.log(result)
+        res.render('view-message', {data: result})
     })
 })
 

@@ -46,13 +46,12 @@ body{
 .container header{
     width: 100%;
     display: flex;
-    background-color:rgb(41, 219, 210);
+    background-color: rgb(41, 219, 210);
     background: linear-gradient(11deg, rgb(41, 219, 210) 49%, rgba(0,212,255,1) 100%);
 }
 
 .container header .head{
     padding: 10px;
-    padding-left: 25px;
     color: white;
     text-transform: capitalize;
     font-weight: bold;
@@ -63,19 +62,34 @@ body{
 }
 
 .container header .head:nth-child(2){
-    flex-basis: 30%;
+    flex-basis: 25%;
     border-right: 1px solid rgba(255, 255, 255, 0.75);
     border-left: 1px solid rgba(255, 255, 255, 0.75);
 }
 
+.container header .head:nth-child(3){
+    flex-basis: 45%;
+}
+
 .container header .head:last-child{
-    flex-basis: 50%;
+    flex-basis: 10%;
+    text-align: center;
 }
 
 .container .body .message{
     width: 100%;
     display: flex;
     background-color: rgb(247, 247, 247);
+}
+
+.container .body .no-msg{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(247, 247, 247);
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .container .body .message:nth-child(even){
@@ -95,11 +109,23 @@ body{
 }
 
 .container .body .message .info:nth-child(2){
-    flex-basis: 30%;
+    flex-basis: 25%;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.container .body .message .info:nth-child(3){
+    flex-basis: 45%;
+}
+
 .container .body .message .info:last-child{
-    flex-basis: 50%;
+    flex-basis: 10%;
+    text-align: center;
+}
+
+.container .body .message .info:last-child a{
+    text-decoration: none;
+    color: rgb(0, 175, 166);
+    font-weight: bold;
+    padding: 10px;
 }
