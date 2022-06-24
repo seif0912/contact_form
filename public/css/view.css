@@ -9,22 +9,25 @@ body{
     min-height: 100vh;
     font-family: sans-serif;
     padding-top: 50px;
-    /* display: flex; */
 }
 
 .container{
     width: 700px;
     padding: 20px;
     background-color: #fafafa;
-    /* transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%; */
     margin: auto auto;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+@media (max-width: 700px){
+    .container{
+        width: 100%;
+    }
+}
+
 .container .header{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     color: #555;

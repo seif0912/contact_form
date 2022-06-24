@@ -43,6 +43,19 @@ body{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+@media (max-width: 1000px){
+    body{
+        padding-top: 80px;
+    }
+    .container{
+        position: unset;
+        transform: unset;
+        top: unset;
+        left: unset;
+        width: 100%;
+    }
+}
+
 .container header{
     width: 100%;
     display: flex;
@@ -74,6 +87,24 @@ body{
 .container header .head:last-child{
     flex-basis: 10%;
     text-align: center;
+}
+
+@media (max-width: 1000px){
+    .container header .head:nth-child(1),
+    .container header .head:nth-child(2),
+    .container .body .message .info:nth-child(2),
+    .container .body .message .info:nth-child(1){
+        display: none;
+    }
+    .container header {
+        justify-content: space-between;
+    }
+    .container .body .message{
+        justify-content: space-between;
+    }
+    .container header .head:last-child{
+        padding-right: 20px;
+    }
 }
 
 .container .body .message{
