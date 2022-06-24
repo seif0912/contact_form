@@ -58,11 +58,13 @@ body{
     cursor: pointer;
     transition: .5s;
     text-decoration: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .home-btn:hover{
     opacity: .85;
     border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
 }
 
 .contact-container .info{

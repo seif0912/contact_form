@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(40, 19, 99, 0.1);
+    margin: 0;
+    position: relative;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.btn{
+    position: absolute;
+    transform: translateX(-50%);
+    top: 15px;
+    left: 50%;
+    padding: 13px 25px;
+    text-transform: capitalize;
+    background-color:rgb(41, 219, 210);
+    background: linear-gradient(11deg, rgb(41, 219, 210) 49%, rgba(0,212,255,1) 100%);
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s;
+    text-decoration: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.btn:hover{
+    opacity: .85;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+}
+
+.container{
+    width: 1000px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container header{
+    width: 100%;
+    display: flex;
+    background-color:rgb(41, 219, 210);
+    background: linear-gradient(11deg, rgb(41, 219, 210) 49%, rgba(0,212,255,1) 100%);
+}
+
+.container header .head{
+    padding: 10px;
+    padding-left: 25px;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.container header .head:first-child{
+    flex-basis: 20%;
+}
+
+.container header .head:nth-child(2){
+    flex-basis: 30%;
+    border-right: 1px solid rgba(255, 255, 255, 0.75);
+    border-left: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.container header .head:last-child{
+    flex-basis: 50%;
+}
+
+.container .body .message{
+    width: 100%;
+    display: flex;
+    background-color: rgb(247, 247, 247);
+}
+
+.container .body .message:nth-child(even){
+    background-color: rgb(235, 235, 235);
+}
+
+.container .body .message:hover {
+    background-color: #D6EEEE;
+}
+
+.container .body .message .info{
+    padding: 10px;
+}
+
+.container .body .message .info:first-child{
+    flex-basis: 20%;
+}
+
+.container .body .message .info:nth-child(2){
+    flex-basis: 30%;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.container .body .message .info:last-child{
+    flex-basis: 50%;
+}

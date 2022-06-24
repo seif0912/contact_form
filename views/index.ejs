@@ -5,15 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact from</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <script src="https://kit.fontawesome.com/c03ec31dc2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/all.min.css">
+    
 </head>
-<body>
-    <h1>index</h1>
-    <a href="/contact">contact</a>
-    <i class="fa-brands fa-42-group"></i>
-    <i class="fa-brands fa-facebook"></i>
-    hh
+<body >
+    <a class="btn" href="/contact">contact</a>
+    
+    <div class="container">
+        <!-- <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>subject</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve adifa aoi aoi</td>
+                <td>Jackson adfa aojdoa ajddj</td>
+                <td>Jackson adfa aojdoa ajddjJackson adfa aojdoa ajddjJackson adfa aojdoa ajddj</td>
+            </tr>
+            <tr>
+                <td><%= data[0].name %></td>
+                <td><%= data[0].email %></td>
+                <td><%= data[0].subject %></td>
+            </tr>
+        </table> -->
+        <header>
+            <div class="head">name</div>
+            <div class="head">email</div>
+            <div class="head">subject</div>
+        </header>
+        <div class="body">
+            <% for(var i=0; i < data.length; i++) {%>
+                <div class="message">
+                    <div class="info"><%=  data[i].name %></div>
+                    <div class="info"><%=  data[i].email %></div>
+                    <div class="info"><%=  data[i].subject %></div>
+                </div>
+            <% } %>
+        </div>
+    </div>
 </body>
 </html>
