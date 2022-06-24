@@ -42,6 +42,14 @@ app.get('/view-message/:id', (req, res) => {
     })
 })
 
+app.get('/delete/:id', (req, res) => {
+    let query = `DELETE FROM messages WHERE id='${req.params.id}'`
+    db.query(query, (err, result) => {
+        if (err) throw err
+        res.status(201).redirect('/')
+    })
+})
+
 app.get('/contact', (req, res) => {
     res.render('contact')
 })

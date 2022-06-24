@@ -12,13 +12,13 @@
     <div class="container">
         <div class="header">
             <div class="right">
-                <h4 class="name">seif baddredine</h4>
-                <h4 class="email">baddredineseif@gmail.com</h4>
+                <h4 class="name"><%= data[0].name %></h4>
+                <h4 class="email"><%= data[0].email %></h4>
             </div>
-            <p class="time">2022-06-24 10:58:07</p>
+            <p class="time"><%= data[0].time %></p>
         </div>
-        <h2 class="subject">this message is about something</h2>
-        <p class="msg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis delectus, dolores assumenda voluptatibus tempora atque ipsum qui provident labore asperiores vitae inventore nihil exercitationem itaque eveniet voluptatum quas incidunt voluptas! Placeat et enim amet magnam ducimus mollitia laborum sint ut? Animi labore molestias blanditiis, quisquam commodi fugit necessitatibus maiores repellendus rerum sint, quis accusamus nihil et est omnis alias asperiores tenetur in enim? Quasi, quibusdam? Labore, dolorem! Accusamus assumenda reprehenderit fugit quam saepe adipisci quia laborum id ab maxime aperiam voluptatem, ipsum, ullam magni dignissimos maiores. Labore excepturi in, odit hic minus rerum, voluptatum illo molestiae non possimus laborum quaerat tempora animi vel nesciunt est eius beatae perferendis consequuntur iste, quas delectus! Perferendis esse mollitia rerum? Vel modi in labore.</p>
+        <h2 class="subject"><%= data[0].subject %></h2>
+        <p class="msg"><%= data[0].message %></p>
         <div class="btns">
             <a href="/">back</a>
             <a href="/delete/<%= data[0].id %>">delete</a>
